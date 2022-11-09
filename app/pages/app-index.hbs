@@ -2,6 +2,17 @@
   Hello<br>
   World
 </span>
-<div>[[ Dynamic Remake code goes here]]</div>
+<div object>
+  <ul array key="todos" sortable>
+    {{#for todo in todos}}
+      <li 
+        object 
+        key:text="@innerText"
+        edit:text
+      >{{default todo.text "New todo item"}}</li>
+    {{/for}}
+  </ul>
+  <button new:todo>Add Todo</button>
+</div>
 <br><br>
-<a href="https://docs.remaketheweb.com/a-simple-example-app/">Try a simple todo app</a>
+<a href="https://docs.remaketheweb.com/a-simple-example-app/">Try a simple tsadfodo appasdf</a>
