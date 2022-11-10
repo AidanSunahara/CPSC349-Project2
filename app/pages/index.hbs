@@ -1,38 +1,27 @@
 
 <ul>
   {{#if currentUser}}
-    <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
-  {{else}}
-  <div class="flex flex-row justify-center space-x-5 p-5">
+    <div class="flex flex-row justify-center space-x-5 p-5 bg-bg_color flex-wrap">
     <div class="flex flex-col items-start space-y-10 py-12 ">
-
-      {{!-- TITLE --}}
-
-      <h1 class = "max-w-lg text-6xl font-bold">
-        Notes Hero
-      </h1>
 
       {{!-- HOOK --}}
 
-      <h2 class="max-w-lg text-4xl font-bold">
+      <h2 class="text-4xl font-medium max-w-md">
         Organize Your Tasks Quick and Fast!
-      </h2>
+      </h2> 
 
       {{!-- Description --}}
 
-      <p class="">
-        create, modify, and catagorize your tasks with our application.
-      </p>
+      <ul class="list-disc space-y-4 text-base font-normal max-w-md m-4">
+        <li>Management software with task management features is essential for productivity & better workflow.</li>
+        <li>Create, Modify, and Catagorize your Tasks with our application.</li>
+     </ul>
 
         {{!-- Signup and Login Option --}}
         
-        <div class="flex justify-around space-x-10">
-          <a href="/user/signup" class="px-3 py-1 rounded transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-blue-400 duration-150"> 
-            signup 
-          </a>
-
-          <a href="/user/login" class="px-3 py-1 rounded transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-blue-400 duration-150"> 
-            login 
+        <div class="">
+          <a href="/app-index" class="btn-secondary"> 
+            Dashboard 
           </a>
         </div>
       
@@ -40,7 +29,39 @@
 
     {{!-- 2nd Column Image --}}
     <div class="">
-      <img src="assets/images/notes.png" alt="">
+      <img src="/assets/images/notes.png" alt="">
+    </div>
+</div>
+  {{else}}
+  <div class="flex flex-row justify-center space-x-5 p-5 bg-bg_color flex-wrap">
+    <div class="flex flex-col items-start space-y-10 py-12 ">
+
+      {{!-- HOOK --}}
+
+      <h2 class="text-4xl font-medium max-w-md">
+        Organize Your Tasks Quick and Fast!
+      </h2> 
+
+      {{!-- Description --}}
+
+      <ul class="list-disc space-y-4 text-base font-normal max-w-md m-4">
+        <li>Management software with task management features is essential for productivity & better workflow.</li>
+        <li>Create, Modify, and Catagorize your Tasks with our application.</li>
+     </ul>
+
+        {{!-- Signup and Login Option --}}
+        
+        <div class="">
+          <a href="/user/signup" class="btn-secondary"> 
+            Get Started 
+          </a>
+        </div>
+      
+    </div>
+
+    {{!-- 2nd Column Image --}}
+    <div class="">
+      <img src="/assets/images/notes.png" alt="">
     </div>
 </div>
   {{/if}}
