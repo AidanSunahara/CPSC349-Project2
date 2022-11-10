@@ -1,8 +1,68 @@
-<h1>Welcome to my app!</h1>
+
 <ul>
   {{#if currentUser}}
-    <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
+    <div class="flex flex-row justify-center space-x-5 p-5 bg-bg_color flex-wrap">
+    <div class="flex flex-col items-start space-y-10 py-12 ">
+
+      {{!-- HOOK --}}
+
+      <h2 class="text-4xl font-medium max-w-md">
+        Organize Your Tasks Quick and Fast!
+      </h2> 
+
+      {{!-- Description --}}
+
+      <ul class="list-disc space-y-4 text-base font-normal max-w-md m-4">
+        <li>Management software with task management features is essential for productivity & better workflow.</li>
+        <li>Create, Modify, and Catagorize your Tasks with our application.</li>
+     </ul>
+
+        {{!-- Signup and Login Option --}}
+        
+        <div class="">
+          <a href="/app-index" class="btn-secondary"> 
+            Dashboard 
+          </a>
+        </div>
+      
+    </div>
+
+    {{!-- 2nd Column Image --}}
+    <div class="">
+      <img src="/assets/images/notes.png" alt="">
+    </div>
+</div>
   {{else}}
-    <li><a href="/user/signup">Sign up for an account</a></li>
+  <div class="flex flex-row justify-center space-x-5 p-5 bg-bg_color flex-wrap">
+    <div class="flex flex-col items-start space-y-10 py-12 ">
+
+      {{!-- HOOK --}}
+
+      <h2 class="text-4xl font-medium max-w-md">
+        Organize Your Tasks Quick and Fast!
+      </h2> 
+
+      {{!-- Description --}}
+
+      <ul class="list-disc space-y-4 text-base font-normal max-w-md m-4">
+        <li>Management software with task management features is essential for productivity & better workflow.</li>
+        <li>Create, Modify, and Catagorize your Tasks with our application.</li>
+     </ul>
+
+        {{!-- Signup and Login Option --}}
+        
+        <div class="">
+          <a href="/user/signup" class="btn-secondary"> 
+            Get Started 
+          </a>
+        </div>
+      
+    </div>
+
+    {{!-- 2nd Column Image --}}
+    <div class="">
+      <img src="/assets/images/notes.png" alt="">
+    </div>
+</div>
   {{/if}}
 </ul>

@@ -7,13 +7,72 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
-<body>
+<body class="bg-bg_color">
   {{#if currentUser}}
-    <a href="/user/logout">Logout</a>
+   <header class=" ">
+    <nav class="flex flex-row justify-between">
+      <div class="flex justify-start ">
+        <a href="/index">
+        <img class = "h-14" src="/assets/images/logo.png" alt="">
+        </a>
+        <p class = "p-2 text-3xl font-serif font-normal text-black">
+          stickynotes
+        </p>
+      </div>
+      
+      <div class="flex space-x-6 p-4 font-normal items-center">
+
+        <a href="/index" class="group text-black-500 transition duration-300">
+            Home
+          <span class="underline-transition"></span>
+        </a>
+        
+
+        <a href="/about" class="group text-black-500 transition duration-300">
+            About Us
+          <span class="underline-transition"></span>
+        </a>
+
+         <a href="/user/logout" class="group text-black-500 transition duration-300">
+            Logout
+          <span class="underline-transition"></span>
+        </a>
+
+     
+    </nav>
+  </header>
   {{else}}
-    <a class="nav__button" href="/user/signup">Sign up</a>
-    &nbsp;
-    <a class="nav__button" href="/user/login">Log in</a>
+  <header class=" ">
+    <nav class="flex flex-row justify-between">
+      <div class="flex justify-start ">
+        <a href="/index">
+        <img class = "h-14" src="/assets/images/logo.png" alt="">
+        </a>
+        <p class = "p-2 text-3xl font-serif font-normal text-black">
+          stickynotes
+        </p>
+      </div>
+      
+      <div class="flex space-x-6 p-4 font-normal items-center">
+
+        <a href="/index" class="group text-black-500 transition duration-300">
+            Home
+          <span class="underline-transition"></span>
+        </a>
+        
+
+        <a href="/about" class="group text-black-500 transition duration-300">
+            About Us
+          <span class="underline-transition"></span>
+        </a>
+
+        <a href="/user/login" class="btn-primary"> 
+          Get Started 
+        </a>
+      </div>
+     
+    </nav>
+  </header>
   {{/if}}
   {{!-- Show errors --}}
   {{#if flashErrors }}
