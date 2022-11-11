@@ -1,7 +1,32 @@
+<style>
+form {text-align: center;}
+input {
+  background-color: lightgrey;
+  width: 300px;
+  border: 2px solid black;
+  padding: 3px;
+  margin: 7px;
+}
+.login {
+  color: red;
+  width: 100px;
+  border: 3px solid black;
+  padding: 2px;
+  margin: 7px;
+}
+.forgot{
+  opacity: 50%;
+  font-size: 10px;
+}
+</style>
+
 <form action="/user/login" method="post">
-  <h1>Log in</h1>
+  <h1>Login to Your Account</h1>
   <input type="text" name="username" placeholder="username" required>
+  <br>
   <input type="password" name="password" placeholder="password" required>
-  <a href="/user/forgot">Forgot your password?</a>
-  <button type="submit">Log in</button>
+  <br>
+  <a class="forgot" href="/user/forgot">Forgot password?</a>
+  <br>
+  <button class="login" type="submit">Login</button>
 </form>
