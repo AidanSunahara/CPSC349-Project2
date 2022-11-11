@@ -1,18 +1,76 @@
-<span class="decoration-clone bg-gradient-to-b from-yellow-400 to-red-500 text-transparent ...">
-  Hello<br>
-  World
-</span>
-<div object>
-  <ul array key="todos" sortable>
-    {{#for todo in todos}}
-      <li 
-        object 
-        key:text="@innerText"
-        edit:text
-      >{{default todo.text "New todo item"}}</li>
-    {{/for}}
-  </ul>
-  <button new:todo>Add Todo</button>
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
+ <div class="topnav"> 
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#Get Started">Get Started</a>
 </div>
-<br><br>
-<a href="https://docs.remaketheweb.com/a-simple-example-app/">Try a simple tsadfodo appasdf</a>
+<style>
+    a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Navbar links */
+.topnav a{
+    float: left;
+    display:block;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+</style>
+
+<br>
+ <h1>Notes Application</h1>
+ <h3>This application allows you to create, edit, and delete notes at your own convenience!</h3>
+  <br>
+ <body style="background-color:lightblue;">
+ <button class="add" id="add">
+    <i class="fas fa-plus"></i> Add note
+</button>
+
+<div class="notes">
+    <div class="functions">
+        <button class="edit"><i class="fas fa-edit"></i></button>
+        <button class="delete"><i class="fas fa-trash-alt"></i></button>
+    </div>
+
+    <div class="text"></div>
+    <textarea></textarea>
+    </div>
+
+<style>
+    .add{
+        position: fixed;
+        height: 50px;
+        width: 100x;
+        right: 1rem;
+        background-color: #FF9999;
+        border: none;
+        border-radius: 3px;
+        padding: 0.5rem 1rem;
+        cursor:pointer;
+    }
+
+    .notes {
+        background-color: white;
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0.1);
+        margin: 30px 20px;
+        height: 400px;
+        width: 400px;
+    }
+
+    .notes .functions button{
+        
+    }
+</style>
+</body> 
+</html>
