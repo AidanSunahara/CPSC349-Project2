@@ -2,40 +2,68 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+<meta http-equiv=""X-UA-Compatible" content=""IE=edge" />
+<meta name="viewport" content="css/main.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
+ <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
 integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<link hred="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" 
+              rel="stylesheet" /> 
 </head>
- <div class="topnav"> 
-  <a class="active" href="#home">Home</a>
-  <a href="#about">About Us</a>
-  <a href="#Get Started">Get Started</a>
-</div>
-<style>
-    a:link {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-}
+<body class="bg-blue">
+    <nav class="flex flex-row justify-between">
+      <div class="flex justify-start ">
+      
+      <div class="flex space-x-6 p-4 font-normal items-center">
 
-/* Navbar links */
-.topnav a{
-    float: left;
-    display:block;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-</style>
+        <a href="/index" class="group text-black-500 transition duration-300">
+            Home
+          <span class="underline-transition"></span>
+        </a> 
+
+        <a href="/about" class="group text-black-500 transition duration-300">
+            About Us
+          <span class="underline-transition"></span>
+        </a>
+         <a href="/user/logout" class="btn-primary"> 
+            Logout
+        </a>  
+    </nav>
+  </header>
+ <h2 class="text-4xl font-medium max-w-md">
+    Organize Your Tasks Quick and Fast!
+ </h2> 
+ <br>
+
+<section id="Notes">
+    <div class=""container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
+         <h2 class="text-4xl font-medium max-w-md">
+    Take, Edit, and Delete Notes!
+ </h2> 
+    </div>
+</section>
+<br> 
+
+<div class="header">
+    <div>
+    <!--Button--> 
+    <button class="float-right bg-white hover:bg-gray text-black font-bold py-2 px-4 rounded">
+  Add a Note
+</button>
+
+ <button class="float-right bg-white hover:bg-gray text-black font-bold py-2 px-4 rounded">
+  Edit
+</button>
+
+
+ <button class="float-right bg-white hover:bg-gray text-black font-bold py-2 px-4 rounded">
+  Delete
+</button>
+    </div>
+</div>
 
 <br>
- <h1>Notes Application</h1>
- <h3>This application allows you to create, edit, and delete notes at your own convenience!</h3>
-  <br>
- <body style="background-color:lightblue;">
- <button class="add" id="add">
-    <i class="fas fa-plus"></i> Add note
-</button>
 
 <div class="notes">
     <div class="functions">
@@ -46,6 +74,17 @@ integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriV
     <div class="text"></div>
     <textarea></textarea>
     </div>
+
+    <div class="notes">
+    <div class="functions">
+        <button class="edit"><i class="fas fa-edit"></i></button>
+        <button class="delete"><i class="fas fa-trash-alt"></i></button>
+    </div>
+
+    <div class="text"></div>
+    <textarea></textarea>
+    </div>
+
 
 <style>
     .add{
@@ -68,9 +107,40 @@ integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriV
         width: 400px;
     }
 
-    .notes .functions button{
-        
+    .notes .functions{
+        background-color: #F8C471;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem;
     }
+
+    .notes .functions button {
+        background-color: transparent;
+        border: none;
+        color: #fff
+        cursor: pointer;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .note textarea{
+        outline: none;
+        font-family: inherit;
+        font-size: 1.2rem;
+        border: none;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .text
+    {
+        display: none;
+    }
+        
+    
 </style>
+
+
 </body> 
 </html>
