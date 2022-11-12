@@ -2,12 +2,22 @@
 module.exports = {
   content: ["./app/**/*.hbs"],
   theme: {
-    extend: {
-      colors:{
-        bg_color: '#fed0c7',
-        btn_color: '#3a36e4'
-      }
+    colors: {
+    
+    'white': '#f8fafc',
+    'sky': '#7dd3fc',
+    'blue': '#A4CAFE',
+    'gray': '#E5E7EB', 
+    
     },
+  screens: {
+  sm: '480px',
+  md: '768px',
+  lg: '976px',
+  xl: '1440px'
+  },
+    extend: {
+  },
   },
   plugins: [],
 }
