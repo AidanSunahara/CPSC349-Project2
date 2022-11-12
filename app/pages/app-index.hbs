@@ -1,146 +1,16 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<meta http-equiv=""X-UA-Compatible" content=""IE=edge" />
-<meta name="viewport" content="css/main.css" />
-<link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
- <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-<link hred="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" 
-              rel="stylesheet" /> 
-</head>
-<body class="bg-blue">
-    <nav class="flex flex-row justify-between">
-      <div class="flex justify-start ">
-      
-      <div class="flex space-x-6 p-4 font-normal items-center">
+<div object>
+  <br>
+  <h1 class="font-bold text-2xl text-center"> Sticky Notes</h1>
 
-        <a href="/index" class="group text-black-500 transition duration-300">
-            Home
-          <span class="underline-transition"></span>
-        </a> 
-
-        <a href="/about" class="group text-black-500 transition duration-300">
-            About Us
-          <span class="underline-transition"></span>
-        </a>
-         <a href="/user/logout" class="btn-primary"> 
-            Logout
-        </a>  
-    </nav>
-  </header>
- <h2 class="text-4xl font-medium max-w-md">
-    Organize Your Tasks Quick and Fast!
- </h2> 
- <br>
-
-<section id="Notes">
-    <div class=""container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
-         <h2 class="text-4xl font-medium max-w-md">
-    Take, Edit, and Delete Notes!
- </h2> 
-    </div>
-</section>
-<br> 
-
-<div class="header">
-    <div>
-    <!--Button--> 
-    <button class="float-right bg-white hover:bg-gray text-black font-bold py-2 px-4 rounded">
-  Add a Note
-</button>
-
- <button class="float-right bg-white hover:bg-gray text-black font-bold py-2 px-4 rounded">
-  Edit
-</button>
-
-
- <button class="float-right bg-white hover:bg-gray text-black font-bold py-2 px-4 rounded">
-  Delete
-</button>
-    </div>
+  <p class = "text-center font-bold"> Write down your notes using the stickies below. You may rearrange each sticky note by holding down on it, and moving it. </p>
+  <br>
+  <ul array key="stickies" sortable class = " font-bold">
+    {{#for sticky in stickies}}
+      <li object key:text="@innerText" edit:text class=" flex border-4 border-grey-60 text-blue-400 text-center">
+        {{default sticky.text "New Sticky"}}
+      </li>
+    {{/for}}
+  </ul>
+  <br>
+  <button new:sticky class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> + Sticky</button>
 </div>
-
-<br>
-
-<div class="notes">
-    <div class="functions">
-        <button class="edit"><i class="fas fa-edit"></i></button>
-        <button class="delete"><i class="fas fa-trash-alt"></i></button>
-    </div>
-
-    <div class="text"></div>
-    <textarea></textarea>
-    </div>
-
-    <div class="notes">
-    <div class="functions">
-        <button class="edit"><i class="fas fa-edit"></i></button>
-        <button class="delete"><i class="fas fa-trash-alt"></i></button>
-    </div>
-
-    <div class="text"></div>
-    <textarea></textarea>
-    </div>
-
-
-<style>
-    .add{
-        position: fixed;
-        height: 50px;
-        width: 100x;
-        right: 1rem;
-        background-color: #FF9999;
-        border: none;
-        border-radius: 3px;
-        padding: 0.5rem 1rem;
-        cursor:pointer;
-    }
-
-    .notes {
-        background-color: white;
-        box-shadow: 0 0 10px 4px rgba(0, 0, 0.1);
-        margin: 30px 20px;
-        height: 400px;
-        width: 400px;
-    }
-
-    .notes .functions{
-        background-color: #F8C471;
-        display: flex;
-        justify-content: flex-end;
-        padding: 0.5rem;
-    }
-
-    .notes .functions button {
-        background-color: transparent;
-        border: none;
-        color: #fff
-        cursor: pointer;
-        font-size: 1rem;
-        margin-left: 0.5rem;
-    }
-
-    .note textarea{
-        outline: none;
-        font-family: inherit;
-        font-size: 1.2rem;
-        border: none;
-        height: 100%;
-        width: 100%;
-        padding: 20px;
-    }
-
-    .text
-    {
-        display: none;
-    }
-        
-    
-</style>
-
-
-</body> 
-</html>
