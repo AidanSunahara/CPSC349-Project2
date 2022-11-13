@@ -1,18 +1,16 @@
-<span class="decoration-clone bg-gradient-to-b from-yellow-400 to-red-500 text-transparent ...">
-  Hello<br>
-  World
-</span>
 <div object>
-  <ul array key="todos" sortable>
-    {{#for todo in todos}}
-      <li 
-        object 
-        key:text="@innerText"
-        edit:text
-      >{{default todo.text "New todo item"}}</li>
+  <br>
+  <h1 class="font-bold text-3xl text-center"> Welcome, <span class="text-blue-500"> {{currentUser.details.username}}</span> </h1>
+
+  <p class = "text-center font-bold"> Write down your notes using the stickies below. You may rearrange each sticky note by holding down on it, and moving it. </p>
+  <br>
+  <ul array key="stickies" sortable class = " grid grid-cols-4 gap-4 font-bold">
+    {{#for sticky in stickies}}
+      <li object key:text="@innerText" edit:text class=" flex border-2 border-red-300 bg-white text-blue-400 text-center">
+        {{default sticky.text "New Sticky"}}
+      </li>
     {{/for}}
   </ul>
-  <button new:todo>Add Todo</button>
+  <br>
+  <button new:sticky class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> + Add new note</button>
 </div>
-<br><br>
-<a href="https://docs.remaketheweb.com/a-simple-example-app/">Try a simple tsadfodo appasdf</a>

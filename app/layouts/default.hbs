@@ -9,7 +9,6 @@
 </head>
 <body class="bg-bg_color">
   {{#if currentUser}}
-   <header class=" ">
     <nav class="flex flex-row justify-between">
       <div class="flex justify-start ">
         <a href="/index">
@@ -32,15 +31,12 @@
             About Us
           <span class="underline-transition"></span>
         </a>
-
-         <a href="/user/logout" class="group text-black-500 transition duration-300">
+        
+         <a href="/user/logout" class="btn-primary"> 
             Logout
-          <span class="underline-transition"></span>
         </a>
-
      
     </nav>
-  </header>
   {{else}}
   <header class=" ">
     <nav class="flex flex-row justify-between">
@@ -66,7 +62,7 @@
           <span class="underline-transition"></span>
         </a>
 
-        <a href="/user/login" class="btn-primary"> 
+        <a href="/user/signup" class="btn-primary"> 
           Get Started 
         </a>
       </div>
