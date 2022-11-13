@@ -1,32 +1,36 @@
-<style>
-form {text-align: center;}
-input {
-  background-color: lightgrey;
-  width: 300px;
-  border: 2px solid black;
-  padding: 3px;
-  margin: 7px;
-}
-.login {
-  color: red;
-  width: 100px;
-  border: 3px solid black;
-  padding: 2px;
-  margin: 7px;
-}
-.forgot{
-  opacity: 50%;
-  font-size: 10px;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About us </title>
+</head>
 
 <form action="/user/login" method="post">
-  <h1>Login to Your Account</h1>
-  <input type="text" name="username" placeholder="username" required>
-  <br>
-  <input type="password" name="password" placeholder="password" required>
-  <br>
-  <a class="forgot" href="/user/forgot">Forgot password?</a>
-  <br>
-  <button class="login" type="submit">Login</button>
+  <div class="flex flex-col bg-grey-lighter min-h-screen ">
+              <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+                  <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+                      <div class="flex flex-row justify-center space-x-2">
+                        <h1 class="mb-10 text-3xl">Login </h1>
+
+                        <img class = "w-10 h-10" src="/assets/images/logo.png" alt="">
+                      </div>
+                      <input
+                          type="text"
+                          class="block border border-grey-light w-full p-3 rounded mb-4"
+                          name="username"
+                          placeholder="Username"/>
+
+                      <input
+                          type="password"
+                          class="block border border-grey-light w-full p-3 rounded mb-4"
+                          name="password"
+                          placeholder="Password"/>
+
+                      <button
+                          type="submit"
+                          class="w-full text-center py-3 rounded bg-blue-500 text-white hover:bg-blue-dark focus:outline-none my-1 hover:scale-110 hover:bg-blue-400 duration-150"
+                      >Login</button>
+                  </div>
+              </div>
+          </div>
 </form>
+</html>

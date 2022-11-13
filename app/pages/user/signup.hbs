@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Signup </title>
+</head>
 <form action="/user/signup" method="post">
   <div class="flex flex-col bg-grey-lighter min-h-screen ">
               <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
@@ -7,19 +12,19 @@
                           type="text"
                           class="block border border-grey-light w-full p-3 rounded mb-4"
                           name="username"
-                          placeholder="Username"/>
+                          placeholder="Username" required/>
 
                       <input
                           type="text"
                           class="block border border-grey-light w-full p-3 rounded mb-4"
                           name="email"
-                          placeholder="Email" />
+                          placeholder="Email" required/>
 
                       <input
                           type="password"
                           class="block border border-grey-light w-full p-3 rounded mb-4"
                           name="password"
-                          placeholder="Password"/>
+                          placeholder="Password" required/>
 
                       <button
                           type="submit"
@@ -37,3 +42,4 @@
               </div>
           </div>
 </form>
+</html>

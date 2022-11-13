@@ -1,21 +1,24 @@
-
-<ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>landing page</title>
+  </head>
   {{#if currentUser}}
     <div class="flex flex-row justify-center space-x-5 p-5 bg-bg_color flex-wrap">
     <div class="flex flex-col items-start space-y-10 py-12 ">
 
       {{!-- HOOK --}}
 
-      <h2 class="text-4xl font-medium max-w-md">
-        Organize Your Tasks Quick and Fast!
-      </h2> 
+      <h1 class="text-4xl font-medium max-w-md">
+        Organize <span class = "text-red-400">Your Notes</span> Quick and Fast!
+      </h1> 
 
       {{!-- Description --}}
 
       <ul class="list-disc space-y-4 text-base font-normal max-w-md m-4">
         <li>Management software with task management features is essential for productivity & better workflow.</li>
         <li>Create, Modify, and Catagorize your Tasks with our application.</li>
-     </ul>
+      </ul>
 
         {{!-- Signup and Login Option --}}
         
@@ -65,4 +68,4 @@
     </div>
 </div>
   {{/if}}
-</ul>
+</html>
