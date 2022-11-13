@@ -23,4 +23,8 @@
   }
 }
 
-  
+@layer components {
+    .signup-primary {
+    @apply block border w-full p-3 rounded mb-4 shadow-md;
+  }
+}  
