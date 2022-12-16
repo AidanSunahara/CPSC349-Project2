@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>CPSC 349 - Exercise 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/output.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- #if currentUser -->
+  <div class="flex flex-row justify-center space-x-5 p-5 bg-bg_color flex-wrap">
+  <div class="flex flex-col items-start space-y-10 py-12 ">
+
+    <!-- HOOK -->
+
+    <h1 class="text-4xl font-medium max-w-md">
+      Organize <span class = "text-red-400">Your Notes</span> Quick and Fast!
+    </h1> 
+
+    <!-- Description -->
+
+    <ul class="list-disc space-y-4 text-base font-normal max-w-md m-4">
+      <li>Management software with task management features is essential for productivity & better workflow.</li>
+      <li>Create, Modify, and Catagorize your Tasks with our application.</li>
+    </ul>
+
+     <!-- Signup and Login Option -->
+      
+      <div class="">
+        <a href="/app-index" class="btn-secondary"> 
+          Dashboard 
+        </a>
+      </div>
+    
+  </div>
+
+  <!-- 2nd Column Image -->
+  <div>
+    <img class="scale-75" src="/assets/images/homePicture.png" alt="">
+  </div>
+</div>
+</html>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script
+    type="application/javascript"
+    defer
+    crossorigin
+    src="https://unpkg.com/pocketbase@0.8.3/dist/pocketbase.umd.js"
+    ></script>
+<script type ='module' src="app.js"></script>
+</html>
